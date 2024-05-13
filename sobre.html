@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .carousel {
+      width: 100%; /* Define a largura da imagem */
+      float: left; /* Faz com que o elemento flutue à esquerda */
+      margin-top: 100px;
+    }
+    .carousel-image {
+      display: none;
+    }
+    .carousel-image.active {
+      display: block;
+      max-width: 100%;
+    }
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    .prev {
+      left: 10px;
+    }
+    .next {
+      right: 10px;
+    }
+
+    @media only screen and (max-width: 480px) {
+  .carousel-image {
+    width: 100%; /* Garante que a imagem não ultrapasse a largura do dispositivo */
+    height: 400px; /* Altura fixa para evitar espaços em branco abaixo das imagens */
+    max-height: 500px; /* Limite máximo de altura */
+    object-fit: cover; /* Preenche o espaço do contêiner mantendo a proporção */
+  }
+}
+
+/* Media query para telas menores que 768px */
+@media only screen and (max-width: 768px) {
+  .carousel {
+    width: 100%; /* Resetar a largura para ocupar toda a tela */
+    float: none; /* Remover a flutuação */
+    margin-top: 0px;
+  }
+  .prev,
+  .next {
+    margin-top: -200px;
+  }
+}
+
+/* Media query para telas menores que 480px */
+@media only screen and (max-width: 480px) {
+  .carousel-image {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do dispositivo */
+    height: auto; /* Ajusta a altura automaticamente */
+    object-fit: cover; /* Preenche o espaço do contêiner mantendo a proporção */
+  }
+  .carousel {
+    height: auto; /* Ajusta a altura automaticamente de acordo com a altura das imagens */
+    margin-top: 100px; /* Adiciona um espaço extra acima do carrossel */
+  }
+  .mid .para {
+    margin-bottom: -3px; /* Ajuste o espaçamento entre os parágrafos */
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<main>
+  <img src="imgs/logotipo.PNG" alt="Logotipo" class="logo">
+  <div class=left>
+    <div class="navbar flex">
+      <div class="backIcon" >
+        <a href="#"><i style="color: white ;" class="fa-solid fa-arrow-left"></i></a>
+      </div>
+      <div class="menu">
+        
+        <ul class="flex list">
+          
+          
+          <a href="home.html" class="button-voltar" style="position: fixed; top: 50px; right: 10px; display: inline-block; width: auto; z-index: 999;">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        </ul>
+      </div>
+    </div>
+    <div class="mid">  
+      <p class="para">SOBRE</p> <br>
+      <p class="parass">A Studio Constructive é uma empresa que alia as capacidades e diferentes
+        experiências dos colaboradores de sua equipe para atender pessoas e organizações
+        com projetos de design de interiores e arquitetura que visam proporcionar
+        sensações e sofisticação no uso dos espaços.</div>
+
+   
+    <div class="social-icons">
+      <a href="https://www.instagram.com/marcosfilhointeriores?igsh=bG5sdDg1anBiMzVk&utm_source=qr" class="icon instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/studiomarcosfilhointeriores?mibextid=LQQJ4d" class="icon facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+
+    <div class=".top" style="margin-top: 20px ; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-bottom: 10px;">   
+      <p class="paras" style="text-decoration: none ;">+55 11 97773-5354</p> <br>
+      <p class="paras">+55 11 99975-2767</p>  <br>
+      <p class="paras">Marcosfilhointeriores@gmail.com</p> <br> 
+      <p class="paras">Rua Fernando de Albuquerque, 31</p> <br>
+      <p class="paras">Sala 61 - Consolação </p> <br>
+      <p class="paras">São Paulo - SP, 01309-030</p> <br>
+      <p class="paras"></p> 
+    </div>
+  </div>
+  <div class="right">
+    <div class="carousel">
+      <img class="carousel-image active" src="imgs/01.png" alt="Image 1"></div>
+      <img class="carousel-image" src="imgs/02.png" alt="Image 2">
+      <img class="carousel-image" src="imgs/03.png" alt="Image 3">
+      <img class="carousel-image active" src="imgs/04.png" alt="Image 4">
+      <img class="carousel-image" src="imgs/05.png" alt="Image 5">
+      <img class="carousel-image" src="imgs/06.png" alt="Image 6">
+      <img class="carousel-image" src="imgs/07.png" alt="Image 7">
+      <!-- Adicione quantas imagens desejar -->
+    </div>
+    
+  </div>
+</main>
+
+<style>
+  .carousel {
+  width: 100%; /* Defina a largura do carrossel para ocupar toda a largura disponível */
+  overflow: hidden; /* Esconda qualquer conteúdo que ultrapasse o carrossel */
+}
+
+.carousel-image {
+  
+  
+  
+  max-width: 50%; /* Define o máximo de largura da imagem para 80% do tamanho original */
+
+  height: calc(100vh - 75px);
+
+  position: relative;
+
+
+}
+
+
+
+</style>
+
+
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.carousel-image');
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    if (index < 0) {
+      currentIndex = totalSlides - 1;
+    } else if (index >= totalSlides) {
+      currentIndex = 0;
+    } else {
+      currentIndex = index;
+    }
+
+    slides.forEach((slide, index) => {
+      if (index === currentIndex) {
+        slide.classList.add('active');
+      } else {
+        slide.classList.remove('active');
+      }
+    });
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  // Função para avançar automaticamente os slides a cada 3 segundos
+  setInterval(() => {
+    nextSlide();
+  }, 3000);
+</script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://wa.me/5511977735354?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site%21?" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#808080;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+  z-index:1000;" target="_blank">
+<i style="margin-top:16px" class="fa fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
+

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Studio Marcos Filho Interiores</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* para evitar barras de rolagem */
+    }
+
+    
+    .top-area {
+        background-color: #fff; /* cor de fundo da área */
+        color: #333; /* cor do texto */
+        padding: 10px; /* espaçamento interno */
+        text-align: left; /* alinhamento do texto à esquerda */
+        width: 100%; /* largura total */
+        position: fixed; /* posição fixa para ficar no topo */
+        top: 0; /* alinhar no topo */
+        z-index: 1000; /* garantir que fique acima do conteúdo */
+        display: flex; /* torna o conteúdo flexível */
+        justify-content: flex-start; /* alinha o conteúdo no início */
+        align-items: center; /* alinha verticalmente ao centro */
+        height: 75px; /* altura desejada */
+    }
+
+    .navbar {
+        position: relative; /* mudado para relativo */
+        width: 100%;
+        margin-top: 75px; /* margem superior para a barra de navegação */
+    }
+
+    .content {
+        position: relative;
+        margin-top: 75px; /* margem superior para a barra de navegação */
+        height: calc(100vh - 75px); /* ajusta a altura da imagem de fundo para ocupar 75% da tela */
+        overflow: hidden; /* oculta conteúdo fora da área do carrossel */
+    }
+
+    .carousel {
+        display: flex; /* torna os divs filhos flexíveis */
+        transition: transform 1s ease; /* animação suave de transição */
+        margin-top: 35px;
+    }
+
+    .slide {
+        min-width: 100%; /* cada div é do tamanho da tela */
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ajuste para cobrir o contêiner mantendo a proporção */
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1001; /* garante que os botões estejam acima das imagens */
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;   
+    }
+   
+    .slide img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover; /* Ajuste para caber completamente dentro do contêiner */
+    }
+
+.logo {
+    max-width: 100px; /* ajuste o tamanho máximo conforme necessário */
+    margin-right: 20px; /* espaçamento à direita */
+}
+
+.social-icons {
+    display: flex; /* torna os ícones flexíveis */
+    
+}
+
+.icon {
+    margin-right: 10px; /* espaçamento entre os ícones */
+    color: #808080;
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+.home {
+    position: absolute;
+    top: 10px; /* ajuste conforme necessário */
+    right: 130px; /* ajuste conforme necessário */
+    font-size: 20px; /* ajuste conforme necessário */
+    color: #808080; /* cor do texto */
+    margin-top: 40px;
+}
+/* Estilos para dispositivos maiores */
+.area-home {
+  float: left;
+  margin-left: 900px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #333;
+}
+
+@media only screen and (max-width: 600px) {
+  .area-home {
+    float: left;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+  }
+
+  .social-icons {
+    display: flex; /* torna os ícones flexíveis */
+  }
+
+  .social-icons .icon {
+    margin-right: -10px; /* Ajuste o espaçamento entre os ícones conforme desejado */
+  }
+
+  .area-home {
+    margin-left: 35px;
+
+  }
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+    <div class="top-area">
+        <img src="imgs/logotipo.PNG" alt="Logotipo" class="logo">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/marcosfilhointeriores?igsh=bG5sdDg1anBiMzVk&utm_source=qr" class="icon instagram" style="margin-right: -10px;"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/studiomarcosfilhointeriores?mibextid=LQQJ4d" class="icon facebook" style="margin-right: -10px;"><i class="fab fa-facebook"></i></a>
+        </div>
+        
+        <a href="home.html" class="area-home" style="position: fixed; top: 40px; right: 40px; font-size: 40px;">
+            <span style="display: block; width: 30px; height: 3px; background-color: rgb(123, 120, 120); margin-bottom: 6px;"></span>
+            <span style="display: block; width: 30px; height: 3px; background-color: rgb(123, 120, 120); margin-bottom: 6px;"></span>
+            <span style="display: block; width: 30px; height: 3px; background-color: rgb(123, 120, 120);"></span>
+          </a>
+        
+          
+
+    </div>
+    
+    
+
+
+<div class="navbar">
+    <!-- Aqui você pode adicionar sua barra de navegação -->
+    <!-- Exemplo: -->
+    <!-- <nav>
+        <ul>
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav> -->
+</div>
+
+<div class="content">
+    <div class="carousel">
+        <div class="slide">
+            <img src="imgs/banheirodesktop.png" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="imgs/quartodesktop.png" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="imgs/bebidadesktop.png" alt="Slide 3">
+        </div>
+        <div class="slide">
+            <img src="imgs/duchadesktop.png" alt="Slide 3">
+        </div>
+        
+        <!-- Adicione mais divs .slide conforme necessário para mais imagens -->
+    </div>
+    <!--<button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>-->
+</div>
+
+<style>
+    /* Estilos para dispositivos móveis */
+    @media screen and (max-width: 767px) {
+        .content .carousel .slide:nth-child(1) img {
+            /* Substitua pelo caminho da imagem que deseja para a versão móvel */
+            content: url('imgs/banheiromobile.png');
+        }
+        .content .carousel .slide:nth-child(2) img {
+            /* Substitua pelo caminho da imagem que deseja para a versão móvel */
+            content: url('imgs/quartomobile.png');
+        }
+        .content .carousel .slide:nth-child(3) img {
+            /* Substitua pelo caminho da imagem que deseja para a versão móvel */
+            content: url('imgs/bebidamobile.png');
+        }
+        .content .carousel .slide:nth-child(4) img {
+            /* Substitua pelo caminho da imagem que deseja para a versão móvel */
+            content: url('imgs/duchamobile.png');
+        }
+        /* Adicione mais regras conforme necessário para mais imagens */
+    }
+</style>
+
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        if (index < 0) {
+            currentIndex = totalSlides - 1;
+        } else if (index >= totalSlides) {
+            currentIndex = 0;
+        } else {
+            currentIndex = index;
+        }
+
+        const offset = -currentIndex * 100;
+        document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+    }
+
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+    
+    // Função para avançar os slides automaticamente a cada 2 segundos
+    setInterval(nextSlide, 3000);
+</script>
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://wa.me/5511977735354?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site%21?" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#808080;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+  z-index:1000;" target="_blank">
+<i style="margin-top:16px" class="fa fa-whatsapp"></i>
+</a>
+
+</body>
+</html>

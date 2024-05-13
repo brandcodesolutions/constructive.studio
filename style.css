@@ -1,0 +1,374 @@
+*{
+  margin:0;
+  padding:0;
+}
+html, body{
+  height:100%;
+  width:100%;
+}
+main{
+  height:100%;
+  width:100%;
+  display:flex;
+}
+.left{
+  width:40%;
+  padding:45px 50px;
+}
+.flex{
+  display: flex;
+}
+.navbar{
+  justify-content: space-between;
+}
+.navbar a {
+    text-decoration: none;
+    font-size: 22px;
+    font-family: sans-serif;
+    color: #c9c9c9;
+    transition: all 0.3s ease;
+    font-weight:600;
+  position:relative;
+}
+.navbar .list i{
+  color: #c9c9c9;
+}
+.before::before{
+  content:"";
+  position:absolute;
+  width:40%;
+  height:2px;
+  top:35px;
+  background:#c9c9c9;
+  transition: all 0.3s ease;
+/*   display:none; */
+}
+.navbar a:hover{
+  color:#282828;
+}
+.before:hover::before{
+  width:100%;
+  background:#282828;
+}
+.list li{
+  padding:0 20px;
+  list-style:none;
+}
+
+.read{
+  font-size: 23px;
+  color:#303030;
+  font-weight:600;
+  text-decoration:none;
+  position:relative;
+}
+
+
+
+.right {
+  width: 100%;
+  height: 100vh; /* Ajustado para ocupar toda a altura da viewport */
+  position: relative;
+}
+
+.top {
+  width: 100%;
+  height: calc(100% - 100px); /* Altura total menos a altura da barra de navegação */
+  position: relative;
+  top: 100px; /* Espaçamento superior para acomodar a barra de navegação */
+}
+
+.topLeft {
+  width: 100%;
+  height: 100%;
+  background-image: url("./imgs/IMG_6391.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  width: 100%;
+  height: 100px; /* Altura da barra de navegação */
+   /* Cor de fundo da barra de navegação */
+  position: absolute;
+  top: 0; /* Ajustado para o topo */
+  left: 0;
+}
+
+.mid {
+  text-align: left  ; /* Alinhamento do texto à esquerda */
+  margin-top: 150px; /* Espaçamento superior */
+}
+
+
+.mid p {
+  font-family: Arial, sans-serif; /* Utilizando uma fonte minimalista */
+  font-size: 13px; /* Tamanho da fonte */
+  margin: 5px 0; /* Espaçamento entre os itens */
+  color: #777; /* Cor cinza para os textos */
+  
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  width: 100px; /* Ajuste conforme necessário */
+  height: auto; /* Isso mantém a proporção da imagem */
+}
+
+.container {
+  overflow: hidden;
+  white-space: nowrap; /* Impede a quebra de linha */
+}
+
+.para {
+  display: inline-block; /* Garante que os elementos fiquem em linha */
+  opacity: 0;
+  animation: slideRight 1s forwards;
+  
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.topLeft {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.social-icons {
+  text-align:left; /* Alinha os ícones à esquerda */
+  margin-top: 20px; /* Ajuste conforme necessário */
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 10px; /* Espaço entre os ícones */
+}
+
+.icon:last-child {
+  margin-right: 0; /* Remove a margem direita do último ícone */
+}
+
+.icon i {
+  font-size: 36px; /* Ajuste o tamanho do ícone conforme necessário */
+}
+
+.instagram i {
+  color: #777; /* Cor do Instagram */
+}
+
+.facebook i {
+  color: #777; /* Cor do Facebook */
+}
+
+.mid {
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.para {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 5px; /* Altura do sublinhado */
+  margin: 0 10px; /* Espaçamento entre os itens */
+  color: #808080; /* Cor do texto */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  transition: color 0.3s ease; /* Animação de mudança de cor do texto */
+}
+
+.para:hover {
+  color: #808080; /* Cor do texto ao passar o mouse */
+}
+
+.para:after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 0.5px; /* Espessura do sublinhado */
+  background-color: white; /* Cor do sublinhado (cinza) */
+  transition: height 0.3s ease; /* Animação de crescimento do sublinhado */
+  transform-origin: bottom left;
+}
+
+.para:hover:after {
+  height: 3px; /* Altura do sublinhado ao passar o mouse */
+}
+
+.top {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 5px; /* Altura do sublinhado */
+  margin: 0 10px; /* Espaçamento entre os itens */
+  color: #808080; /* Cor do texto */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  transition: color 0.3s ease; /* Animação de mudança de cor do texto */
+}
+
+
+
+.paras {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 5px; /* Altura do sublinhado */
+  margin: 0 10px; /* Espaçamento entre os itens */
+  color: #808080; 
+}
+
+.info {
+  display: inline;
+  color: #000; /* Cor do texto */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  transition: color 0.3s ease; /* Animação de mudança de cor do texto */
+}
+
+body {
+  overflow: hidden;
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 768px) {
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita a rolagem horizontal */
+    font-size: 15px;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center; /* Centraliza todo o conteúdo na tela */
+  }
+
+  .left {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Mantém o padding dentro da largura total */
+    text-align: center; /* Centraliza o conteúdo dentro da div */
+    
+  }
+
+  .right {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -150px; /* Ajuste o valor conforme necessário para remover o espaço */
+  }
+
+  .carousel {
+    width: 100%;
+    height: 100vh; /* Ajusta a altura para a altura total da viewport */
+    overflow: hidden;
+    margin-bottom: 10px; /* Adiciona espaço entre os carrosséis */
+    margin: 0; /* Remover qualquer margem */
+    padding: 0; /* Remover qualquer padding */
+    border: none; /* Remover qualquer borda */
+    
+  }
+
+  
+    .carousel-image {
+      width: calc(100% - 5px); /* Largura total menos 5 pixels de margem */
+      margin-right: 5px; /* Margem de 5 pixels no lado direito */
+      height: 100%; /* Ajusta a altura da imagem para a altura total da div */
+      margin: 0; /* Remover qualquer margem */
+      padding: 0; /* Remover qualquer padding */
+      border: none; /* Remover qualquer borda */
+    }
+    
+  }
+
+  .logo {
+    width: 80px;
+    margin-bottom: 20px; /* Adiciona espaço entre o logotipo e o conteúdo */
+  }
+
+  .navbar {
+    height: auto;
+  }
+
+  .navbar a {
+    font-size: 18px;
+  }
+
+  .top {
+    width: 100%;
+    text-align: left; /* Alinha o conteúdo à esquerda */
+    margin-top: 20px; /* Espaçamento superior */
+    margin-bottom: 20px; /* Adiciona espaço entre .mid e .top */
+  }
+
+  .mid {
+    margin-top: 100px;
+    text-align: center ; /* Alinha o conteúdo à esquerda */
+    margin-bottom: 20px; /* Adiciona espaço entre .mid e .social-icons */
+  }
+
+  .para {
+    font-size: 14px;
+    margin-bottom: 10px; /* Adiciona espaço entre os itens de lista */
+  }
+
+  .social-icons {
+    text-align: center;
+    margin-top: 10px;
+     margin-bottom: 20px; /* Adiciona espaço abaixo dos ícones sociais */
+  }
+
+  .icon i {
+    font-size: 24px;
+  }
+
+  .info {
+    font-size: 14px;
+  }
+
+  .info p {
+    margin-bottom: 5px;
+  }
+
+
+  .mid {
+    text-align: left; /* Alinha o conteúdo à esquerda por padrão */
+    margin-top: 150px; /* Espaçamento superior padrão para desktop */
+    margin-bottom: 20px; /* Adiciona espaço entre .mid e .social-icons */
+}
+
+/* Estilos para telas menores que 769px (celular) */
+@media screen and (max-width: 768px) {
+    .mid {
+        text-align: center; /* Alinha o conteúdo ao centro em telas menores que 769px */
+        margin-top: 100px; /* Espaçamento superior para celular */
+    }
+    
+      .carousel-image {
+        width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+        height: 600px; /* Altura fixa para as imagens em dispositivos móveis */
+        object-fit: cover; /* Redimensiona a imagem mantendo a proporção e cortando o excesso */
+      }
+    }
+
+
