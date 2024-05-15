@@ -371,34 +371,37 @@ body {
       }
     }
 
-/* Estilos básicos para o carrossel */
+/* Garantindo que o contêiner do carrossel ocupe 100% da largura do pai */
 .right {
   width: 100%;
-  overflow: hidden;
+  overflow: hidden; /* Para esconder as partes das imagens que estão fora do contêiner */
 }
 
+/* Configuração do carrossel */
 .carousel {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  flex-wrap: nowrap; /* Impede que as imagens quebrem para uma nova linha */
+  overflow-x: auto; /* Permite rolagem horizontal */
+  scroll-snap-type: x mandatory; /* Para rolagem suave em dispositivos móveis */
 }
 
+/* Configuração das imagens no carrossel */
 .carousel-image {
-  flex: 0 0 auto;
-  width: 100%;
+  flex: 0 0 auto; /* Impede que as imagens cresçam ou encolham */
+  width: 100%; /* Faz com que cada imagem ocupe 100% da largura do contêiner do carrossel */
+  scroll-snap-align: center; /* Centraliza a imagem ao parar de rolar */
+}
+
+/* Garantindo que as imagens sejam redimensionadas corretamente */
+.carousel-image {
+  max-width: 100%;
   height: auto;
-  scroll-snap-align: center;
 }
 
-/* Estilos para ocultar a barra de rolagem em navegadores diferentes */
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.carousel {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+/* Estilo adicional para dispositivos móveis */
+@media (max-width: 768px) {
+  .carousel-image {
+      width: 100%;
+  }
 }
 
