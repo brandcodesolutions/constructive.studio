@@ -371,4 +371,34 @@ body {
       }
     }
 
+/* Estilos básicos para o carrossel */
+.right {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-image {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  scroll-snap-align: center;
+}
+
+/* Estilos para ocultar a barra de rolagem em navegadores diferentes */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
