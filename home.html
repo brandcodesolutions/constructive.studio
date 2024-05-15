@@ -8,52 +8,40 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
   <style>
 
 body, p, a, h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif; /* Defina a fonte minimalista desejada */
 }
 
-    .carousel {
-      width: 100%; /* Define a largura da imagem */
-      float: left; /* Faz com que o elemento flutue à esquerda */
-      margin-top: 100px;
-    }
-    .carousel-image {
-      display: none;
-    }
-    .carousel-image.active {
-      display: block;
-      max-width: 100%;
-    }
-    .prev,
-    .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(255, 255, 255, 0.5);
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      z-index: 1001;
-    }
-    .prev {
-      left: 10px;
-    }
-    .next {
-      right: 10px;
-    }
-
-/* Media query para telas menores que 768px */
-/* Media query para telas menores que 480px */
-@media only screen and (max-width: 480px) {
-  .carousel-image {
-    width: 100%; /* Garante que a imagem não ultrapasse a largura do dispositivo */
-    height: 400px; /* Altura fixa para evitar espaços em branco abaixo das imagens */
-    max-height: 500px; /* Limite máximo de altura */
-    object-fit: cover; /* Preenche o espaço do contêiner mantendo a proporção */
-  }
+.carousel {
+  width: 100%; /* Define a largura da imagem */
+  float: left; /* Faz com que o elemento flutue à esquerda */
+  margin-top: 100px;
+}
+.carousel-image {
+  display: none;
+}
+.carousel-image.active {
+  display: block;
+  max-width: 100%;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1001;
+}
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
 }
 
 /* Media query para telas menores que 768px */
@@ -61,37 +49,56 @@ body, p, a, h1, h2, h3, h4, h5, h6 {
   .carousel {
     width: 100%; /* Resetar a largura para ocupar toda a tela */
     float: none; /* Remover a flutuação */
-    margin-top: 0px;
+   
   }
   .prev,
   .next {
     margin-top: -200px;
   }
+  .right {
+    margin-top: -130px;
+  }
+
+   
+  
 }
 
 /* Media query para telas menores que 480px */
 @media only screen and (max-width: 480px) {
   .carousel-image {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do dispositivo */
-    height: auto; /* Ajusta a altura automaticamente */
+    width: 100%; /* Garante que a imagem não ultrapasse a largura do dispositivo */
+    max-height: 300px; /* Limite máximo de altura */
     object-fit: cover; /* Preenche o espaço do contêiner mantendo a proporção */
   }
   .carousel {
     height: auto; /* Ajusta a altura automaticamente de acordo com a altura das imagens */
-    margin-top: 100px; /* Adiciona um espaço extra acima do carrossel */
+    margin-top: 100px; /* Adiciona um espaço extra acima do carrossel */ 
   }
   .mid .para {
     margin-bottom: -3px; /* Ajuste o espaçamento entre os parágrafos */
   }
 }
 
+/* Media query para telas com largura de aproximadamente 375 x 667 pixels */
+@media only screen and (min-width: 375px) and (max-width: 414px) and (min-height: 667px) and (max-height: 736px) {
+  .carousel {
+    margin-top: 30px; /* Aplica a margem de 30px apenas nessas resoluções */
+  }
+  .carousel-image {
+    width: 100%; /* Garante que a imagem não ultrapasse a largura do dispositivo */
+    max-height: 400px; /* Limite máximo de altura */
+    object-fit: cover; /* Preenche o espaço do contêiner mantendo a proporção */
+  }
+}
 
-  </style>
+</style>
+
+    
 </head>
 <body>
 
 <main>
-  <img src="imgs/logotipo.PNG" alt="Logotipo" class="logo">
+  <img  src="imgs/logotipo.PNG" alt="Logotipo" class="logo">
   <div class=left>
     <div class="navbar flex">
       <div class="backIcon" >
@@ -137,20 +144,20 @@ body, p, a, h1, h2, h3, h4, h5, h6 {
       <p class="paras">São Paulo - SP, 01309-030</p> <br>
       <p class="paras"></p> 
     </div>
-  </div>
+  </div> 
   <div class="right">
+    
     <div class="carousel">
-      <img class="carousel-image active" src="imgs/01.png" alt="Image 1"></div>
+      <img class="carousel-image active" src="imgs/01.png" alt="Image 1">
       <img class="carousel-image" src="imgs/02.png" alt="Image 2">
       <img class="carousel-image" src="imgs/03.png" alt="Image 3">
-      <img class="carousel-image active" src="imgs/04.png" alt="Image 4">
+      <img class="carousel-image " src="imgs/04.png" alt="Image 4">
       <img class="carousel-image" src="imgs/05.png" alt="Image 5">
       <img class="carousel-image" src="imgs/06.png" alt="Image 6">
-      <img class="carousel-image" src="imgs/07.png" alt="Image 7">
-      <!-- Adicione quantas imagens desejar -->
+      <img class="carousel-image" src="imgs/07.png" alt="Image 7"></div>
+      <!-- Adicione quantas imagens desejar-->
     </div>
-    
-  </div>
+
 </main>
 
 <style>
