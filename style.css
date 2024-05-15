@@ -114,7 +114,7 @@ main{
   position: absolute;
   top: 20px;
   left: 50px;
-  width: 100px; /* Ajuste conforme necessário */
+  width: 600px; /* Ajuste conforme necessário */
   height: auto; /* Isso mantém a proporção da imagem */
 }
 
@@ -302,7 +302,7 @@ body {
   }
 
   .logo {
-    width: 80px;
+    width: 200px;
     margin-bottom: 20px; /* Adiciona espaço entre o logotipo e o conteúdo */
   }
 
