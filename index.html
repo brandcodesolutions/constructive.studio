@@ -218,13 +218,15 @@
         
         /* Adicione mais regras conforme necessário para mais imagens */
         @media screen and (max-width: 767px) {
-    .content .carousel .slide:nth-child(3) {
-        background-image: url('imgs/duchamobile3.jpg');
-        background-size: cover; /* Ajuste o tamanho da imagem conforme necessário */
-        background-position: center; /* Ajuste a posição da imagem conforme necessário */
-        background-repeat: no-repeat; /* Evita que a imagem seja repetida */
+    .content .carousel .slide:nth-child(3) img {
+        /* Substitua pelo caminho da imagem que deseja para a versão móvel */
+        src: url('imgs/duchamobile3.jpg');
+        width: 100%; /* Definindo a largura da imagem para 50% do contêiner pai */
+        height: 83%;
+       
     }
 }
+
 
     }
 </style>
